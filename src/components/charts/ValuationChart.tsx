@@ -43,7 +43,7 @@ export default function ValuationChart({ data }: ChartDataProps) {
           <Tooltip 
             cursor={{fill: '#F3F4F6'}} 
             contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
-            formatter={(value: number) => [`$${value.toLocaleString()}`, '']}
+            formatter={(value: any) => [`$${Number(value).toLocaleString()}`, '']}
           />
           <Legend wrapperStyle={{ paddingTop: '20px' }} />
           <Bar name="Total Cost" dataKey="inventoryCost" fill="#2563EB" radius={[4, 4, 0, 0]} maxBarSize={50} />
